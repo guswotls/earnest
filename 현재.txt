@@ -1,0 +1,28 @@
+lvm
+pv
+
+
+  gv   =>    lvm = 다수의 디스크나 파티션을 하나로 묶어서 구성하는 기술   
+pv+pv
+
+pe=> pv=> gv=> lvm
+
+RAID = 0~6
+
+RAID 0 - contatenate
+          - stripe 
+
+RAID 1 - mirroring 복제
+
+RAID 2 - stripe            (패리티비트- 에러,오류 검출 , 해밍코드- 오류 정정 저장)
+
+RAID 3,4 - stripe  패리티비트 저장
+
+RAID 5,6 - 패리티비트를 다른 하드에 분산저장       
+useradd - 계정을 만드는 명령어
+passwd - 비밀번호 재지정
+userdel - 사용자 제거
+cat /etc/passwd
+ls - 목록을 보여주는 명령어
+pwd-print working directory
+
