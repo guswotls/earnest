@@ -11,9 +11,30 @@
     menu{width: 85%; height: 70%; }
     aside{width: 15%; float:right;}
     footer{width: 85%; height: 15%; }
+    #menubar{
+            background : bisque;
+        }
+        #menubar ul{
+            margin : 0;
+            padding : 0;
+            width : 567px;
+        }
+        #menubar ul li{
+            display : inline-block;
+            list-style-type : none;
+            padding : 0px 15px;
+        }
+        #menubar ul li a{
+            color : white;
+            text-decoration : none
+        }
+        #menubar ul li a:hover{
+            color : violet;
+        }
 </style>
 </head>
 <body>
+    <nav id="menubar">
     <header>
         <table align="left">
             <td><a href="index.html "><img src="img/s.music.png" alt=""></a></td>
@@ -25,9 +46,9 @@
     </header>
     <menu>
         <table width="400" align="left">
-            <td><img src="img/인기 차트.png"></td>
-            <td><img src="img/최신 음악.png"></td>
-            <td><img src="img/장르 음악.png"></td>
+            <td><a href="#"><img src="img/인기 차트.png"></a></td>
+            <td><a href="#"><img src="img/최신 음악.png"></a></td>
+            <td><a href="#"><img src="img/장르 음악.png"></a></td>
         </table>
     </menu>
     <aside>
@@ -43,7 +64,7 @@
             <td><img src="img/고객센터.png"></td>
         </table> 
     </footer>
-
+</nav>
 </body>
 </html>
 
