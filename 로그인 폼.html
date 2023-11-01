@@ -5,15 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>텍스트 입력 폼</title>
+    <style>
+        input[type=text]{
+        color : black;
+        }
+        input:hover, textarea:hover{
+            background : aliceblue;
+        }
+        label {
+            display : block;
+            padding : 5px;
+        }
+        label span{
+            display : inline-block;
+            width : 90px;
+            text-align : right;
+            padding : 10px;
+        }
+    </style>
 </head>
 <body>
-<h3>로그인 및 회원가입</h3>
+<h3>로그인</h3>
+<hr>
 <from>
+    <label>
     아이디: <input type="text"value=""><br><br>
-    비밀번호: <input type="password" value=""maxlength="4"><br><br>
-    <input type="reset" value="로그인"><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    S.MUSIC: <input type="reset" value="S.MUSIC"></a><br>
-    <reset><a href="index.html"></a></reset>
+    </label>
+    <label>
+    비밀번호: <input type="password" value=""maxlength="8"><br><br>
+    <a href="리스트로 메뉴 만들기.html"><input type="reset" value="로그인"></a><br><br><br>
+    </label>
+    <label>
+    회원가입: <a href="회원가입.html"><input type="reset" value="회원가입"></a><br>
+    </label>
 </from>
 </body>
 </html>

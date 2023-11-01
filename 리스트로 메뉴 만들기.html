@@ -6,37 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>리스트로 메뉴 만들기</title>
     <style>
+        html,body{margin:0; padding:0; height:100%;
+        background:black;}
+        header{width: 100%; height: 5%; font-size: 50px;}
+        aside{width: 15%; float:right;}
+        footer{width: 85%; height: 15%; }
     #menubar{
-            background : bisque;
+            background : black;
         }
         #menubar ul{
-            margin : 0;
-            padding : 0;
+            margin : 20px;
+            padding : 10px;
             width : 567px;
         }
         #menubar ul li{
             display : inline-block;
             list-style-type : none;
-            padding : 0px 15px;
+            padding : 10px 20px;
         }
         #menubar ul li a{
             color : white;
             text-decoration : none
         }
         #menubar ul li a:hover{
-            color : violet;
+            color : blue;
         }
     </style>
 </head>
 <body>
-    <nav id="menubar">
+    <header>
+        <table align="left">
+            <td><a href="리스트로 메뉴 만들기.html">S.MUSIC</a></td>
+            <td><a href="#"><img src="img/검생창.png" ></a></td>
+        </table>
+        <table align="right">
+            <td><a href="로그인 폼.html">로그인</a><a href="회원가입.html">/회원가입</a></td></tr>
+        </table>
+    </header>
+    <h4> 
+        <nav id="menubar">
         <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">Espresso</a></li>
-            <li><a href="#">Cappuccino</a></li>
-            <li><a href="#">Cafe Latte</a></li>
-            <li><a href="#">F.A.Q</a></li>
+            <li><a href="인기차트.html">인기차트</a></li>
+            <li><a href="#">최신음악</a></li>
+            <li><a href="#">장르음악</a></li>
+            <li><a href="#">마이음악</a></li>
+            <li><a href="#">더보기</a></li>
         </ul>
-    </nav>
+    </h4></nav>
+    <hr>
+    <aside>
+        <td><img src="img/뮤직 시작하기.png"></td><br>
+        <td><img src="img/오디오 경험하기.png"></td><br>
+        <td><img src="img/구독결제.png"></td><br>
+    </aside>
+    <footer>
+        <nav id="menubar">
+            <ul>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">이용자</a></li>
+                <li><a href="#">정보</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+    </footer>
 </body>
 </html>
