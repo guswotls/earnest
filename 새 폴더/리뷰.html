@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뮤지컬 리뷰 사이트</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        .review-form {
+            background-color: #292929;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .review-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .review-item {
+            background-color: #333;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .review-item p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>뮤지컬 리뷰 사이트</h1>
+    </header>
+
+    <div class="container">
+        <div class="review-form">
+            <h2>리뷰 작성</h2>
+            <form id="reviewForm">
+                <div>
+                    <label for="userName">이름</label>
+                    <input type="text" id="userName" required>
+                </div>
+                <div>
+                    <label for="userReview">리뷰</label>
+                    <textarea id="userReview" rows="3" required></textarea>
+                </div>
+                <button type="button" onclick="submitReview()">리뷰 작성</button>
+            </form>
+        </div>
+
+        <h2>리뷰 목록</h2>
+        <ul class="review-list" id="reviewList">
+        </ul>
+    </div>
+
+    <script>
+        function submitReview() {
+            var userName = document.getElementById("userName").value;
+            var userReview = document.getElementById("userReview").value;
+
+            if (userName && userReview) {
+                var reviewList = document.getElementById("reviewList");
+
+                var reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+                var newReview = { userName: userName, userReview: userReview };
+                reviews.push(newReview);
+
+                localStorage.setItem("reviews", JSON.stringify(reviews));
+
+                var reviewItem = document.createElement("li");
+                reviewItem.className = "review-item";
+                reviewItem.innerHTML = "<p><strong>" + newReview.userName + ":</strong> " + newReview.userReview + "</p>";
+                reviewList.appendChild(reviewItem);
+
+                document.getElementById("userName").value = "";
+                document.getElementById("userReview").value = "";
+            }
+        }
+
+        window.onload = function () {
+            var reviewList = document.getElementById("reviewList");
+            var reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+            reviews.forEach(function (review) {
+                var reviewItem = document.createElement("li");
+                reviewItem.className = "review-item";
+                reviewItem.innerHTML = "<p><strong>" + review.userName + ":</strong> " + review.userReview + "</p>";
+                reviewList.appendChild(reviewItem);
+            });
+        };
+    </script>
+
+</body>
+
+</html>
