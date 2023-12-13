@@ -4,47 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>리스트로 메뉴 만들기</title>
+    <title>S.MUSIC</title>
     <style>
-        html,body{margin:0; padding:0; height:100%;
-        background:black;}
-        header{width: 100%; height: 5%; font-size: 50px;}
-        aside{width: 15%; float:right;}
-        footer{width: 85%; height: 15%; }
-    #menubar{
-            background : black;
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: black;
         }
-        #menubar ul{
-            margin : 20px;
-            padding : 10px;
-            width : 567px;
+
+        header {
+            width: 100%;
+            height: 5%;
+            font-size: 24px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
-        #menubar ul li{
-            display : inline-block;
-            list-style-type : none;
-            padding : 10px 20px;
+
+        footer {
+            width: 100%;
+            height: 15%;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
         }
-        #menubar ul li a{
-            color : white;
-            text-decoration : none
+
+        #menubar {
+            background: black;
         }
-        #menubar ul li a:hover{
-            color : blue;
+
+        #menubar ul {
+            margin: 20px;
+            padding: 10px;
+            width: 567px;
+            list-style-type: none;
+        }
+
+        #menubar ul li {
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+        #menubar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #menubar ul li a:hover {
+            color: blue;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <table align="left">
-            <td><a href="리스트로 메뉴 만들기.html">S.MUSIC</a></td>
-            <td><a href="#"><img src="img/검생창.png" ></a></td>
-        </table>
-        <table align="right">
-            <td><a href="로그인 폼.html">로그인</a><a href="회원가입.html">/회원가입</a></td></tr>
-        </table>
+        <div>
+            <a href="리스트로 메뉴 만들기.html">S.MUSIC</a>
+            <a href="#"><img src="img/검생창.png" alt="검생창"></a>
+        </div>
+        <div>
+            <a href="로그인 폼.html">로그인</a>
+            <a href="회원가입.html">/회원가입</a>
+        </div>
     </header>
-    <h4> 
-        <nav id="menubar">
+
+    <nav id="menubar">
         <ul>
             <li><a href="인기차트.html">인기차트</a></li>
             <li><a href="#">최신음악</a></li>
@@ -52,13 +88,10 @@
             <li><a href="#">마이음악</a></li>
             <li><a href="#">더보기</a></li>
         </ul>
-    </h4></nav>
+    </nav>
+
     <hr>
-    <aside>
-        <td><img src="img/뮤직 시작하기.png"></td><br>
-        <td><img src="img/오디오 경험하기.png"></td><br>
-        <td><img src="img/구독결제.png"></td><br>
-    </aside>
+
     <footer>
         <nav id="menubar">
             <ul>
@@ -67,6 +100,8 @@
                 <li><a href="#">정보</a></li>
                 <li><a href="#">고객센터</a></li>
             </ul>
+        </nav>
     </footer>
+
 </body>
 </html>

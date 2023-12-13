@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멜론 스타일 음악 플랫폼</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2ECC71;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .song {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #2ECC71;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>멜론 스타일 음악 플랫폼</h1>
+    </header>
+
+    <section>
+        <h2>최신 음악</h2>
+        <div class="song">
+            <span>곡 제목 1</span>
+            <button onclick="playMusic('song1')">재생</button>
+        </div>
+        <div class="song">
+            <span>곡 제목 2</span>
+            <button onclick="playMusic('song2')">재생</button>
+        </div>
+        <!-- 추가적인 최신 음악 목록 추가 가능 -->
+    </section>
+
+    <section>
+        <h2>인기 아티스트</h2>
+        <div class="song">
+            <span>아티스트 1</span>
+            <button onclick="showArtistDetails('artist1')">상세 정보</button>
+        </div>
+        <div class="song">
+            <span>아티스트 2</span>
+            <button onclick="showArtistDetails('artist2')">상세 정보</button>
+        </div>
+        <!-- 추가적인 인기 아티스트 목록 추가 가능 -->
+    </section>
+
+    <footer>
+        &copy; 2023 멜론 스타일 음악 플랫폼. 모든 권리 보유.
+    </footer>
+
+    <script>
+        function playMusic(songId) {
+            // 여기에 음악 재생 기능을 구현할 수 있습니다.
+            console.log(`재생 중: ${songId}`);
+        }
+
+        function showArtistDetails(artistId) {
+            // 여기에 아티스트 상세 정보 팝업을 구현할 수 있습니다.
+            console.log(`아티스트 상세 정보: ${artistId}`);
+        }
+    </script>
+
+</body>
+</html>

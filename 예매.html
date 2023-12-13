@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뮤지컬 예매</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #292929;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #ffcc00;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #444;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        button:hover {
+            background-color: #ffdb4d;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button[type="button"] {
+            margin-top: 10px;
+            background-color: #555;
+            color: #fff;
+        }
+
+        button[type="button"]:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="reservationForm">
+        <h2>뮤지컬 예매</h2>
+        <label for="musical">뮤지컬 선택:</label>
+        <select id="musical" name="musical" required>
+            <option value="dracula">뮤지컬 드라큘라</option>
+            <option value="monte">뮤지컬 몬테크리스토</option>
+            <option value="Les Miserables">뮤지컬 레미제라블</option>
+            <option value="Rebecca">뮤지컬 레베카</option>
+            <option value="Lucia">뮤지컬 루치아</option>
+            <option value="Jekyll and Hyde">뮤지컬 지킬 앤 하이드</option>
+        </select>
+
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">이메일:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="tickets">티켓 수량:</label>
+        <input type="number" id="tickets" name="tickets" min="1" required>
+
+        <button type="submit">예매하기</button>
+        <a href="뮤지컬 홈페이지.html"><button type="button">돌아가기</button></a>
+    </form>
+
+    <script>
+        document.getElementById("reservationForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            alert("예매가 완료되었습니다!");
+        });
+    </script>
+
+</body>
+
+</html>

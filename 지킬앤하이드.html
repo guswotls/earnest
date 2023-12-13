@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뮤지컬 홈페이지</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        nav a:nth-child(7) {
+            background-color: yellow;
+            color: black;
+        }
+
+        .hero {
+            background-size: cover;
+            background-position: center;
+            height: 200%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #f8f9fa;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #000000;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .musical-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .musical-image {
+            max-width: 300px;
+            border-radius: 8px;
+        }
+
+        .musical-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .musical-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .musical-subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .musical-description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="뮤지컬 홈페이지.html">메인</a><a href="예매.html">예매</a>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1 class="display-4">뮤지컬 지킬앤하이드 (Jekyll＆Hyde)</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="musical-info">
+            <img src="img/지킬 앤 하이드.gif" alt="Musical Image" class="musical-image">
+            <div class="musical-details">
+                <h2 class="musical-title">소개</h2>
+                <h3 class="musical-subtitle">공연장: 샤롯데씨어터</h3>
+                <p class="musical-description">
+                    "뮤지컬 지킬 앤 하이드"는 로버트 루이스 스티븐슨의 소설 "드. 지킬과 Mr. 하이드"를 기반으로 하며,
+                    한 인간의 이중 성격과 갈등을 그린 작품입니다. 지킬 박사가 하이드로 변하면서 나타나는 어둠 속 인격,
+                    그리고 이로 인해 벌어지는 사건들이 강렬하게 펼쳐집니다. 음악적으로도 감동과 긴장감을 선사하는 이 작품은
+                    관객에게 깊은 여운을 남기는 뮤지컬 중 하나입니다.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p></p>
+    </footer>
+
+</body>
+
+</html>
